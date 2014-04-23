@@ -2,7 +2,7 @@
 
 @import WebKit;
 
-// hidden webpreferences methods
+// hidden webpreferences methods, used to enable special magic options on the webview
 @interface WebPreferences (WebPreferencesPrivate)
 - (void)_setLocalStorageDatabasePath:(NSString *)path;
 - (void) setLocalStorageEnabled: (BOOL) localStorageEnabled;
