@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DE31F27C1909B871003F3702 /* Window.m in Sources */ = {isa = PBXBuildFile; fileRef = DE31F27B1909B871003F3702 /* Window.m */; };
+		DE31F27F1909B9BF003F3702 /* PBWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = DE31F27E1909B9BF003F3702 /* PBWebView.m */; };
+		DE31F2831909CFBF003F3702 /* WebViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DE31F2821909CFBF003F3702 /* WebViewDelegate.m */; };
 		DEE02877190871CB003A1265 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEE02876190871CB003A1265 /* Cocoa.framework */; };
 		DEE02881190871CB003A1265 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DEE0287F190871CB003A1265 /* InfoPlist.strings */; };
 		DEE02883190871CB003A1265 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE02882190871CB003A1265 /* main.m */; };
@@ -31,6 +34,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DE31F27A1909B871003F3702 /* Window.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Window.h; sourceTree = "<group>"; };
+		DE31F27B1909B871003F3702 /* Window.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Window.m; sourceTree = "<group>"; };
+		DE31F27D1909B9BF003F3702 /* PBWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBWebView.h; sourceTree = "<group>"; };
+		DE31F27E1909B9BF003F3702 /* PBWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBWebView.m; sourceTree = "<group>"; };
+		DE31F2811909CFBF003F3702 /* WebViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewDelegate.h; sourceTree = "<group>"; };
+		DE31F2821909CFBF003F3702 /* WebViewDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewDelegate.m; sourceTree = "<group>"; };
 		DEE02873190871CB003A1265 /* WebViewTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WebViewTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEE02876190871CB003A1265 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		DEE02879190871CB003A1265 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -73,6 +82,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DE31F2801909BEB7003F3702 /* Subclasses */ = {
+			isa = PBXGroup;
+			children = (
+				DE31F27D1909B9BF003F3702 /* PBWebView.h */,
+				DE31F27E1909B9BF003F3702 /* PBWebView.m */,
+				DE31F27A1909B871003F3702 /* Window.h */,
+				DE31F27B1909B871003F3702 /* Window.m */,
+			);
+			name = Subclasses;
+			sourceTree = "<group>";
+		};
 		DEE0286A190871CB003A1265 = {
 			isa = PBXGroup;
 			children = (
@@ -117,6 +137,9 @@
 			children = (
 				DEE02888190871CB003A1265 /* AppDelegate.h */,
 				DEE02889190871CB003A1265 /* AppDelegate.m */,
+				DE31F2811909CFBF003F3702 /* WebViewDelegate.h */,
+				DE31F2821909CFBF003F3702 /* WebViewDelegate.m */,
+				DE31F2801909BEB7003F3702 /* Subclasses */,
 				DEE0288B190871CB003A1265 /* MainMenu.xib */,
 				DEE0288E190871CB003A1265 /* Images.xcassets */,
 				DEE0287D190871CB003A1265 /* Supporting Files */,
@@ -252,7 +275,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE31F27C1909B871003F3702 /* Window.m in Sources */,
+				DE31F27F1909B9BF003F3702 /* PBWebView.m in Sources */,
 				DEE0288A190871CB003A1265 /* AppDelegate.m in Sources */,
+				DE31F2831909CFBF003F3702 /* WebViewDelegate.m in Sources */,
 				DEE02883190871CB003A1265 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -466,6 +492,7 @@
 				DEE028A6190871CC003A1265 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DEE028A7190871CC003A1265 /* Build configuration list for PBXNativeTarget "WebViewTestTests" */ = {
 			isa = XCConfigurationList;
@@ -474,6 +501,7 @@
 				DEE028A9190871CC003A1265 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
