@@ -3,11 +3,8 @@
 
 //https://stackoverflow.com/questions/15694510/programatically-create-initial-window-of-cocoa-app-os-x
 
-#import <objc/runtime.h>
-
 int main(int argc, const char * argv[])
 {
-//    (void)instrumentObjcMessageSends(YES);
     NSArray *tl;
     NSApplication * application = [NSApplication sharedApplication];
     [[NSBundle mainBundle] loadNibNamed:@"MainMenu" owner:application topLevelObjects:&tl];
@@ -16,7 +13,7 @@ int main(int argc, const char * argv[])
     [application setDelegate:applicationDelegate];                      // Assign delegate to the NSApplication
     [application run];                                                  // Call the Apps Run method
 
-    return 0;       // App Never gets here.
+    return 0;  // App Never gets here.
 }
 
 //int main(int argc, const char * argv[])

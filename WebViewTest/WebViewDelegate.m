@@ -4,13 +4,10 @@
 
 @implementation WebViewDelegate
 
-- (void)webView:(WebView *)sender mouseDidMoveOverElement:(NSDictionary *)elementInformation modifierFlags:(NSUInteger)modifierFlags {
-    NSLog(@"webView mouseDidMoveOverElement");
-}
+# pragma mark - WebUIDelegate
 
-- (BOOL)webView:(WebView *)sender shouldPerformAction:(SEL)action fromSender:(id)fromObject {
-    NSLog(@"shouldPerformAction");
-    return YES;
-}
+//- (void)webView:(WebView *)sender mouseDidMoveOverElement:(NSDictionary *)elementInformation modifierFlags:(NSUInteger)modifierFlags {
+//    NSLog(@"webView mouseDidMoveOverElement");
+//}
 
 @end

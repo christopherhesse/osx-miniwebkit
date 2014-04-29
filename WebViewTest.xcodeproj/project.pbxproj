@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9A940347FD074788992B1E93 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EB30A9751964861B60EE0D3 /* libPods.a */; };
 		DE31F27C1909B871003F3702 /* Window.m in Sources */ = {isa = PBXBuildFile; fileRef = DE31F27B1909B871003F3702 /* Window.m */; };
-		DE31F27F1909B9BF003F3702 /* PBWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = DE31F27E1909B9BF003F3702 /* PBWebView.m */; };
 		DE31F2831909CFBF003F3702 /* WebViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DE31F2821909CFBF003F3702 /* WebViewDelegate.m */; };
+		DE7638C3190F6B9100A2BD9B /* PBHTTPConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = DE7638C2190F6B9100A2BD9B /* PBHTTPConnection.m */; };
 		DEE02877190871CB003A1265 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEE02876190871CB003A1265 /* Cocoa.framework */; };
 		DEE02881190871CB003A1265 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DEE0287F190871CB003A1265 /* InfoPlist.strings */; };
 		DEE02883190871CB003A1265 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE02882190871CB003A1265 /* main.m */; };
@@ -34,12 +35,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		43CC1F59BF5F47F886EFA0F8 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		6EB30A9751964861B60EE0D3 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE31F27A1909B871003F3702 /* Window.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Window.h; sourceTree = "<group>"; };
 		DE31F27B1909B871003F3702 /* Window.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Window.m; sourceTree = "<group>"; };
-		DE31F27D1909B9BF003F3702 /* PBWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBWebView.h; sourceTree = "<group>"; };
-		DE31F27E1909B9BF003F3702 /* PBWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBWebView.m; sourceTree = "<group>"; };
 		DE31F2811909CFBF003F3702 /* WebViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewDelegate.h; sourceTree = "<group>"; };
 		DE31F2821909CFBF003F3702 /* WebViewDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewDelegate.m; sourceTree = "<group>"; };
+		DE7638C1190F6B9100A2BD9B /* PBHTTPConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBHTTPConnection.h; sourceTree = "<group>"; };
+		DE7638C2190F6B9100A2BD9B /* PBHTTPConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBHTTPConnection.m; sourceTree = "<group>"; };
 		DEE02873190871CB003A1265 /* WebViewTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WebViewTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEE02876190871CB003A1265 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		DEE02879190871CB003A1265 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -67,6 +70,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DEE02877190871CB003A1265 /* Cocoa.framework in Frameworks */,
+				9A940347FD074788992B1E93 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,12 +89,19 @@
 		DE31F2801909BEB7003F3702 /* Subclasses */ = {
 			isa = PBXGroup;
 			children = (
-				DE31F27D1909B9BF003F3702 /* PBWebView.h */,
-				DE31F27E1909B9BF003F3702 /* PBWebView.m */,
 				DE31F27A1909B871003F3702 /* Window.h */,
 				DE31F27B1909B871003F3702 /* Window.m */,
 			);
 			name = Subclasses;
+			sourceTree = "<group>";
+		};
+		DE7638C4190F6C3400A2BD9B /* Server */ = {
+			isa = PBXGroup;
+			children = (
+				DE7638C1190F6B9100A2BD9B /* PBHTTPConnection.h */,
+				DE7638C2190F6B9100A2BD9B /* PBHTTPConnection.m */,
+			);
+			name = Server;
 			sourceTree = "<group>";
 		};
 		DEE0286A190871CB003A1265 = {
@@ -100,6 +111,7 @@
 				DEE0289A190871CC003A1265 /* WebViewTestTests */,
 				DEE02875190871CB003A1265 /* Frameworks */,
 				DEE02874190871CB003A1265 /* Products */,
+				43CC1F59BF5F47F886EFA0F8 /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -118,6 +130,7 @@
 				DEE02876190871CB003A1265 /* Cocoa.framework */,
 				DEE02895190871CB003A1265 /* XCTest.framework */,
 				DEE02878190871CB003A1265 /* Other Frameworks */,
+				6EB30A9751964861B60EE0D3 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -139,6 +152,7 @@
 				DEE02889190871CB003A1265 /* AppDelegate.m */,
 				DE31F2811909CFBF003F3702 /* WebViewDelegate.h */,
 				DE31F2821909CFBF003F3702 /* WebViewDelegate.m */,
+				DE7638C4190F6C3400A2BD9B /* Server */,
 				DE31F2801909BEB7003F3702 /* Subclasses */,
 				DEE0288B190871CB003A1265 /* MainMenu.xib */,
 				DEE0288E190871CB003A1265 /* Images.xcassets */,
@@ -184,9 +198,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DEE028A4190871CC003A1265 /* Build configuration list for PBXNativeTarget "WebViewTest" */;
 			buildPhases = (
+				5FC070E9A6B84DB2B1C0CA87 /* Check Pods Manifest.lock */,
 				DEE0286F190871CB003A1265 /* Sources */,
 				DEE02870190871CB003A1265 /* Frameworks */,
 				DEE02871190871CB003A1265 /* Resources */,
+				1FBA3791058146CDAE01454F /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -270,14 +286,47 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1FBA3791058146CDAE01454F /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5FC070E9A6B84DB2B1C0CA87 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		DEE0286F190871CB003A1265 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				DE31F27C1909B871003F3702 /* Window.m in Sources */,
-				DE31F27F1909B9BF003F3702 /* PBWebView.m in Sources */,
 				DEE0288A190871CB003A1265 /* AppDelegate.m in Sources */,
+				DE7638C3190F6B9100A2BD9B /* PBHTTPConnection.m in Sources */,
 				DE31F2831909CFBF003F3702 /* WebViewDelegate.m in Sources */,
 				DEE02883190871CB003A1265 /* main.m in Sources */,
 			);
@@ -409,6 +458,7 @@
 		};
 		DEE028A5190871CC003A1265 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 43CC1F59BF5F47F886EFA0F8 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -422,6 +472,7 @@
 		};
 		DEE028A6190871CC003A1265 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 43CC1F59BF5F47F886EFA0F8 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
