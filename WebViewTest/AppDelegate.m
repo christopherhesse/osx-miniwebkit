@@ -1,22 +1,11 @@
 #import "AppDelegate.h"
 #import "Window.h"
 #import "WebViewDelegate.h"
-
 #import <CocoaHTTPServer/HTTPServer.h>
 #import "PBHTTPConnection.h"
+#import "PBWebView.h"
 
 @import WebKit;
-
-// constraints on webview for resize events
-// no notification center for resize events?
-// NSWindow init function rather than this complicated nswindow thing
-// NSWindowDelegate
-// NSWindow Subclass
-// How do events and NSResponder actually work
-// WebUIDelegate
-// WebScriptObject
-// Multiple windows
-// New project name plus remove tests
 
 // hidden webpreferences methods, used to enable special magic options on the webview
 @interface WebPreferences (WebPreferencesPrivate)
@@ -47,7 +36,7 @@
 - (void)applicationWillFinishLaunching:(NSNotification *)notification {
     NSView *view = self.window.contentView;
     // https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/DisplayWebContent/DisplayWebContent.html#//apple_ref/doc/uid/10000164-SW1
-    WebView *webView = [[WebView alloc] initWithFrame:view.bounds];
+    WebView *webView = [[PBWebView alloc] initWithFrame:view.bounds];
     self.window.contentView = webView;
 
     WebPreferences *webPrefs = [WebPreferences standardPreferences];
@@ -63,8 +52,9 @@
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     [self.window makeKeyAndOrderFront:self];
 
-    NSURL *url = [NSURL URLWithString:@"http://jsfiddle.net/W6J6J/"];
-//    NSURL *url = [NSURL URLWithString:@"file:///Users/christopherhesse/Documents/Projects/WebKit/mac/osx-miniwebkit/index.html"];
+    NSString *path = [[NSBundle mainBundle] resourcePath];
+//    NSURL *url = [NSURL URLWithString:@"http://jsfiddle.net/W6J6J/"];
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"file://%@/index.html", path]];
     [[self.webView mainFrame] loadRequest:[NSURLRequest requestWithURL:url]];
 
 	_httpServer = [[HTTPServer alloc] init];
